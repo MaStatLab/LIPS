@@ -1,4 +1,4 @@
-lips_hd_pred = function( Y, X, T = NULL, kstep = 0, alpha = NULL, method = "g", nparticle = 100, rho0=0.5, rho0.method ="beta-binomial",rho.prop=0.1,p.mix=6,resample.param=0,n.top.vars=5){
+lips_hd_pred = function( Y, X, T = NULL, kstep = 0, alpha = NULL, method = "g", nparticle = 100, rho0=NULL, rho0.method ="beta-binomial",rho.prop=0.1,p.mix=6,resample.param=0,n.top.vars=5){
   ## p.mix is the mixing probability for boostrap filter
   ## p.mix = 1 --> always boostrap filter
   ## p.mix = 0 --> always k-step filter
@@ -21,6 +21,11 @@ lips_hd_pred = function( Y, X, T = NULL, kstep = 0, alpha = NULL, method = "g", 
   if (is.null(alpha)) {
     if (method == "g") alpha = nobs ## unit information g-prior
     if (method == "hyper-g") alpha = 3
+  }
+
+  if (is.null(rho0) && rho0.method != "beta-binomial") {
+    print("Error: No prior inclusion probability specified.")
+    return(0)
   }
 
   if (rho0.method == "const") rho0.method.int = as.integer(0)
