@@ -5,15 +5,18 @@ attach(UScrime)
 
 X = cbind(log(M),So,log(Ed),log(Po1),log(Po2),log(LF),log(M.F), log(Pop),log(NW),log(U1),log(U2),log(GDP),log(Ineq),log(Prob),log(Time))
 Y = log(y)
-T = ncol(X)
-p= ncol(X)
 
-kstep=3
-nparticle = 50000
-alpha = length(Y)
 
 set.seed(12345)
-ans = lips(Y,X,T=T,kstep = kstep, alpha = alpha, nparticle = nparticle,resample.param=0)
+
+### Run one of the below
+
+## k = 3 and 50000 particles
+ans = lips(Y,X,T=ncol(X),kstep = 3, alpha = length(Y), nparticle = 50000,resample.param=0)
+
+## k = 4 and 5000 particles
+ans = lips(Y,X,T=ncol(X),kstep = 4, alpha = length(Y), nparticle = 5000,resample.param=0)
+
 
 models=ans$models
 weights = exp(ans$logweights)
