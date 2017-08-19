@@ -1,0 +1,12 @@
+Package: LIPS
+Type: Package
+Title: Scalable Bayesian model averaging through local information propagation
+Version: 0.1
+Date: 2017-08-19
+Author: Li Ma
+Maintainer: Li Ma <li.ma@duke.edu>
+Description: An implementation of the LIPS algorithm for scalable Bayesian model averaging on linear regression models.
+License: GPL (>= 3)
+Imports: Rcpp (>= 0.11.0)
+NeedsCompilation: yes
+
