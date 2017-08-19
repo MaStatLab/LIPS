@@ -1,0 +1,3 @@
+useDynLib(LIPS)
+export(lips,lips_hd,lips_hd_pred)
+
