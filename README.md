@@ -22,4 +22,4 @@ ans = lips_hd_pred(Y,X)
 ```
 
 ### Reference
-Ma L. and Soriano J. (2015). Scalable Bayesian model averaging through local information propagation. Journal of the American Statistical Association, Theory and Methods. Vol. 110, No. 510, 795-809.
+Ma L. (2015) Scalable Bayesian model averaging through local information propagation. Journal of the American Statistical Association, Theory and Methods. Vol. 110, No. 510, 795-809.
