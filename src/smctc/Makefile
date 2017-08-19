@@ -1,8 +1,8 @@
 .PHONY: docs clean distclean examples
 
-default: libraries # examples
+default: libraries
 
-all: libraries 
+all: libraries
 
 clean:
 	make -Csrc clean
