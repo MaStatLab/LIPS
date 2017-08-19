@@ -1,4 +1,4 @@
-lips_hd = function( Y, X, T = NULL, kstep = 0, alpha = NULL, method = "g", nparticle = 100, rho0=NULL, rho0.method ="beta-binomial",rho.prop=0.1,p.mix=1,resample.param=0,n.top.vars=5){
+lips_hd = function( Y, X, T = NULL, kstep = 0, alpha = NULL, method = "g", nparticle = 100, rho0=NULL, rho0.method ="beta-binomial",rho.prop=0.1,p.mix=0,resample.param=0,n.top.vars=5){
   ## p.mix is the mixing probability for boostrap filter
   ## p.mix = 1 --> always boostrap filter
   ## p.mix = 0 --> always k-step filter
