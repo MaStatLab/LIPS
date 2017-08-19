@@ -1,3 +1,4 @@
 useDynLib(LIPS)
+import(MASS)
 export(lips,lips_hd,lips_hd_pred)
 
