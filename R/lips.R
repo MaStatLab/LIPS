@@ -15,8 +15,6 @@ lips = function( Y, X, T = NULL, kstep = 0, alpha = NULL, method = "g", nparticl
   if (is.null(T)) T = p
   else  T = min(p,T);
 
-  if (is.null(alpha)) alpha = ncol(length(Y))
-
   if (method == "g") method.int = as.integer(0)
   if (method == "hyper-g") method.int = as.integer(1)
 

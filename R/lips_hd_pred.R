@@ -15,8 +15,6 @@ lips_hd_pred = function( Y, X, T = NULL, kstep = 0, alpha = NULL, method = "g", 
   if (is.null(T)) T = p
   else  T = min(p,T);
 
-
-
   if (method == "g") method.int = as.integer(0)
   if (method == "hyper-g") method.int = as.integer(1)
 
