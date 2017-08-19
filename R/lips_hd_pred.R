@@ -12,7 +12,7 @@ lips_hd_pred = function( Y, X, T = NULL, kstep = 0, alpha = NULL, method = "g", 
   nobs = length(Y)
   p = ncol(X)
   kstep = min(c(kstep,T), na.rm=TRUE)
-  if (is.null(T)) T = p;
+  if (is.null(T)) T = p
   else  T = min(p,T);
 
 
