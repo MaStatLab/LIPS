@@ -4,7 +4,7 @@
 #define NUMNODEVAR 2
 
 union INDEX_TYPE_t {
-  unsigned short var[MAXVAR]; 
+  unsigned short var[MAXVAR];
   unsigned long long index;
 };
 
@@ -19,8 +19,7 @@ public:
 };
 
 double get_logBF(INDEX_TYPE index,int size);
-//inline INDEX_TYPE init_index(int n,int level);
-//inline INDEX_TYPE make_child_index(INDEX_TYPE& I, unsigned short add_dim);
+
 inline bool is_in_model(const INDEX_TYPE& I,int i);
 inline bool is_not_in_model(const INDEX_TYPE& I, int i);
 
@@ -31,10 +30,10 @@ double compute_rho(int level, int rho_method = 0);
 
 smc::particle<cv_state> fInitialise(smc::rng *pRng);
 
-long fSelect(long lTime, const smc::particle<cv_state> & p, 
+long fSelect(long lTime, const smc::particle<cv_state> & p,
 	     smc::rng *pRng);
 
-void fMove(long lTime, smc::particle<cv_state> & pFrom, 
+void fMove(long lTime, smc::particle<cv_state> & pFrom,
 	   smc::rng *pRng);
 
 void fMove2(long lTime, smc::particle<cv_state > & pFrom, smc::rng *pRng);
