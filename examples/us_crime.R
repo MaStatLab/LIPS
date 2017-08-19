@@ -12,10 +12,10 @@ set.seed(12345)
 ### Run one of the below
 
 ## k = 3 and 50000 particles
-ans = lips(Y,X,T=ncol(X),kstep = 3, alpha = length(Y), nparticle = 50000,resample.param=0)
+ans = lips(Y,X,kstep = 3, nparticle = 50000,resample.param=0)
 
 ## k = 4 and 5000 particles
-ans = lips(Y,X,T=ncol(X),kstep = 4, alpha = length(Y), nparticle = 5000,resample.param=0)
+ans = lips(Y,X,kstep = 4, nparticle = 5000,resample.param=0)
 
 
 models=ans$models
